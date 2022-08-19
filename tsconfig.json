@@ -22,8 +22,8 @@
   },
   "include": [
     "src/*", // 导入目录
+    "src/**/*.ts", // 导入目录
     "global.d.ts",
-    "test/*.ts",
-    "src/*.ts"
+    "test/*.ts"
   ]
 }

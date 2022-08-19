@@ -1,12 +1,12 @@
 {
-	"name": "template",
-	"shortName": "template",
+	"name": "log",
+	"shortName": "log",
 	"version": "0.0.0-bate.0",
   "main": "index.js",
   "types": "dist/index.d.ts",
-  "module": "dist/template.esm.js",
-  "unpkg": "dist/template.iife.js",
-  "jsdelivr": "dist/template.iife.js",
+  "module": "dist/log.esm.js",
+  "unpkg": "dist/log.iife.js",
+  "jsdelivr": "dist/log.iife.js",
   "author": {
     "email": "mekefly@qq.com",
     "name": "mekefly",
@@ -24,6 +24,7 @@
 		"build:all": "pnpm build:dev && pnpm build:prod",
 		"build:prod": "pnpm rollup -c ./rollup.config.js --environment NODE_ENV:production",
 		"build:dev": "pnpm rollup -c ./rollup.config.js --environment NODE_ENV:development",
+		"dev": "pnpm rollup --watch -c ./rollup.config.js --environment NODE_ENV:development --environment build-options:iife",
     "pub": "npm publish",
 		"test": "vitest"
 	},

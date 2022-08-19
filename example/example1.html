@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="../dist/log.iife.js"></script>
+    <script>
+      const { log, group, setInclude, warn, dir } = Log;
+      setInclude({ $: true, group1: true });
+
+      log("33");
+      const end = group("group1");
+      warn("22");
+      log({ test: 33 });
+      dir(new Map());
+      console.dir({ test: "33" });
+      end();
+      log("33");
+      console.log("\x1b[36m%s\x1b[0m", "I am cyan");
+      const styles = [
+        "color：green",
+        "background：yellow",
+        "font-size：30px",
+        "border：1px solid red",
+        "text-shadow：2px 2px black",
+        "padding：10px",
+      ].join(";");
+      console.log("%c%s", styles, "Some Important Message Here");
+    </script>
+  </body>
+</html>
